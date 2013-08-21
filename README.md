@@ -10,8 +10,8 @@ if the status site is reporting an outage (red status).
 
 Clone/download and unzip the repository
 
-  > make install
-  > sudo start outage-lights
+    > make install
+    > sudo start outage-lights
 
 ## Wiring
 
