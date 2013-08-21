@@ -12,10 +12,6 @@ process.on('exit', function(){
   wpi.digitalWrite(workPin, 0);
 })
 
-process.on('exit', function(){
-  wpi.digitalWrite(workPin, 0);
-})
-
 var pollStatus = function(){
 
   wpi.digitalWrite(workPin, 1);
@@ -27,7 +23,7 @@ var pollStatus = function(){
       var jsonBody = JSON.parse(responseBody);
       var data = {
         operations: jsonBody['App Operations'],
-        tools: jsonBody['Tools'] 
+        tools: jsonBody['Tools']
       }
       logfmt.log(data);
       if(data.operations == 'red' || data.tools == 'red'){
