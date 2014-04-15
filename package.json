@@ -9,7 +9,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "preinstall": "bash install-wiringPi.sh"
+    "preinstall": "bash install-wiringPi.sh",
+    "start": "./bin/outage-lights"
   },
   "repository": "",
   "author": "",
