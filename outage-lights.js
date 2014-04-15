@@ -13,7 +13,6 @@ process.on('exit', function(){
 })
 
 var pollStatus = function(){
-
   wpi.digitalWrite(workPin, 1);
   https.get('https://status.heroku.com/status.json', function(res) {
     var responseBody = '';
