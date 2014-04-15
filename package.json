@@ -10,7 +10,7 @@
   "devDependencies": {},
   "scripts": {
     "preinstall": "bash install-wiringPi.sh",
-    "start": "./bin/outage-lights"
+    "start": "node outage-lights"
   },
   "repository": "",
   "author": "",
