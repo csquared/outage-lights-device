@@ -1,9 +1,5 @@
 #!/bin/sh
 
-sudo() {
-  exec $*
-}
-
 check_make_ok() {
   if [ $? != 0 ]; then
     echo ""
@@ -38,11 +34,11 @@ fi
 
 if [ x$1 = "xuninstall" ]; then
   cd wiringPi
-  echo -n "wiringPi: " ; sudo make uninstall
+  echo -n "wiringPi: " ; make uninstall
   cd ../devLib
-  echo -n "DevLib:   " ; sudo make uninstall
+  echo -n "DevLib:   " ; make uninstall
   cd ../gpio
-  echo -n "gpio:     " ; sudo make uninstall
+  echo -n "gpio:     " ; make uninstall
   exit
 fi
 
@@ -54,30 +50,30 @@ fi
   echo
   echo "WiringPi Library"
   cd wiringPi
-  sudo make uninstall
+  make uninstall
   if [ x$1 = "xstatic" ]; then
     make static
     check_make_ok
-    sudo make install-static
+    make install-static
   else
     make
     check_make_ok
-    sudo make install
+    make install
   fi
   check_make_ok
 
   echo
   echo "WiringPi Devices Library"
   cd ../devLib
-  sudo make uninstall
+  make uninstall
   if [ x$1 = "xstatic" ]; then
     make static
     check_make_ok
-    sudo make install-static
+    make install-static
   else
     make
     check_make_ok
-    sudo make install
+    make install
   fi
   check_make_ok
 
@@ -86,7 +82,7 @@ fi
   cd ../gpio
   make
   check_make_ok
-  sudo make install
+  make install
   check_make_ok
 
 # echo
