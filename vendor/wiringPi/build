@@ -1,5 +1,9 @@
 #!/bin/sh
 
+sudo() {
+  exec $*
+}
+
 check_make_ok() {
   if [ $? != 0 ]; then
     echo ""
