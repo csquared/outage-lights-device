@@ -6,7 +6,14 @@ This simple node.js script pings the status site
 every 5 seconds and turns on a power strip of red lights
 if the status site is reporting an outage (red status).
 
-## Install
+## Installation
+
+### Prereqs:
+
+- Node.js
+- [WiringPi](http://wiringpi.com/download-and-install/)
+
+### Install:
 
 Clone/download and unzip the repository
 
